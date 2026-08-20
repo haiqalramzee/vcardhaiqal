@@ -1889,3 +1889,45 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/* Client Slider Animation */
+.clients-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.clients-slider {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: max-content;
+  animation: slide 15s linear infinite;
+  padding: 20px 0;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 15px)); }
+}
+
+.clients-slider:hover {
+  animation-play-state: paused;
+}
+
+/* Hover dimming effect on logo with white light border */
+.clients-slider .clients-item a {
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 8px; /* For smooth border */
+}
+
+.clients-slider .clients-item a img {
+  display: block;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.clients-slider .clients-item a:hover img {
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.4);
+  filter: brightness(1.2);
+}
