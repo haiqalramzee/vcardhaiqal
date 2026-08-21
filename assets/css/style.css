@@ -1905,6 +1905,25 @@ textarea.form-input::-webkit-resizer { display: none; }
   padding: 20px 0;
 }
 
+/* Fix for large client logos */
+.clients-slider .clients-item {
+  width: 150px;
+  min-width: 150px;
+}
+
+.clients-slider .clients-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-slider .clients-item img {
+  width: 100%;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+}
+
 @keyframes slide {
   0% { transform: translateX(0); }
   100% { transform: translateX(calc(-50% - 15px)); }
